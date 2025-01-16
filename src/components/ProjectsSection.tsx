@@ -12,6 +12,11 @@ export const ProjectsSection = () => {
       description: "A website designed to host your services in the colsultancy department. Provides basic description of the provider and the services provided and means of contacting.",
       tech: "HTML, CSS, PHP, JavaScript",
     },
+    {
+      title: "Blog Site",
+      description: "A website to write and upload blogs, with the functionalities of signing up, search, and notifocation section.",
+      tech: "TypeScript, JavaScript, Supabase",
+    },
   ];
 
   return (
