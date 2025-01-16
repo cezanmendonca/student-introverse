@@ -9,19 +9,19 @@ export const HeroSection = () => {
           <h1 className="text-4xl md:text-6xl font-bold text-center lg:text-left">
             Hi, I'm <span className="text-indigo-600">Alex Chen</span>
           </h1>
-          <p className="text-xl text-gray-600 text-center lg:text-left">
+          <p className="text-xl text-gray-600 text-center lg:text-left px-6 lg:px-0 max-w-2xl">
             Computer Science Student at Stanford University, passionate about building innovative solutions and learning new technologies.
           </p>
-          <div className="flex gap-4">
-            <Button className="bg-indigo-600 hover:bg-indigo-700">
+          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+            <Button className="bg-indigo-600 hover:bg-indigo-700 w-full sm:w-auto">
               <Mail className="mr-2 h-4 w-4" />
               Contact Me
             </Button>
-            <Button variant="outline">
+            <Button variant="outline" className="w-full sm:w-auto">
               <GithubIcon className="mr-2 h-4 w-4" />
               GitHub
             </Button>
-            <Button variant="outline">
+            <Button variant="outline" className="w-full sm:w-auto">
               <LinkedinIcon className="mr-2 h-4 w-4" />
               LinkedIn
             </Button>
