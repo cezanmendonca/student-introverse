@@ -7,10 +7,10 @@ export const HeroSection = () => {
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12">
         <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start gap-8 animate-fadeIn">
           <h1 className="text-4xl md:text-6xl font-bold text-center lg:text-left">
-            Hi, I'm <span className="text-indigo-600">Alex Chen</span>
+            Hi, I'm <span className="text-indigo-600">Cezan Mendonca</span>
           </h1>
           <p className="text-xl text-gray-600 text-center lg:text-left px-6 lg:px-0 max-w-2xl">
-            Computer Science Student at Stanford University, passionate about building innovative solutions and learning new technologies.
+            Computer Science Student at SRM University, passionate about cyber security and web development.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
             <Button className="bg-indigo-600 hover:bg-indigo-700 w-full sm:w-auto">
