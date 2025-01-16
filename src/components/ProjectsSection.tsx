@@ -3,19 +3,14 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 export const ProjectsSection = () => {
   const projects = [
     {
-      title: "AI Study Assistant",
-      description: "A machine learning-powered app that helps students optimize their study schedules.",
-      tech: "Python, TensorFlow, React",
+      title: "Malware Tester",
+      description: "A system that consists of multiple modules, from using Gen AI cocnepts to alter the structure and signatures of Malware for ambiguity, to study of such malware via Passive and Active Scans.",
+      tech: "Python, Kaggle",
     },
     {
-      title: "EcoTrack",
-      description: "Mobile app for tracking and reducing personal carbon footprint.",
-      tech: "React Native, Node.js, MongoDB",
-    },
-    {
-      title: "Smart Campus Map",
-      description: "Interactive campus navigation system with real-time updates.",
-      tech: "JavaScript, Google Maps API, Firebase",
+      title: "Consultant Website",
+      description: "A website designed to host your services in the colsultancy department. Provides basic description of the provider and the services provided and means of contacting.",
+      tech: "HTML, CSS, PHP, JavaScript",
     },
   ];
 
