@@ -27,10 +27,23 @@ export const ContactSection = () => {
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
-      // In a real application, you would send this data to your backend
-      console.log("Form submitted:", values);
-      
-      // For now, we'll just show a success message
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: values.name,
+          email: values.email,
+          message: values.message,
+          to: 'bloghubsupabase@gmail.com'
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send email');
+      }
+
       toast({
         title: "Message sent!",
         description: "Thank you for your message. I'll get back to you soon!",
