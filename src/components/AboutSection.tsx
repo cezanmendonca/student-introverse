@@ -13,7 +13,7 @@ export const AboutSection = () => {
                 <BookOpen className="h-12 w-12 text-indigo-600 mb-4" />
                 <h3 className="text-xl font-semibold mb-2">Education</h3>
                 <p className="text-gray-600">
-                  Pursuing BS in Computer Science at Stanford University. Expected graduation 2025.
+                  Pursuing CSE with Specialization in Cyber Security from SRM Institute of Science and Technology. Expected graduation 2025.
                 </p>
               </div>
             </CardContent>
@@ -25,7 +25,7 @@ export const AboutSection = () => {
                 <Code className="h-12 w-12 text-indigo-600 mb-4" />
                 <h3 className="text-xl font-semibold mb-2">Skills</h3>
                 <p className="text-gray-600">
-                  Proficient in Python, JavaScript, and React. Passionate about web development and AI.
+                  Proficient in Python, JavaScript, and React coding Languages. Use of tools and concepts such as Virtualisation, PE Studio, YARA Rules. Passionate about Web Development and Cyber Security.
                 </p>
               </div>
             </CardContent>
@@ -37,7 +37,7 @@ export const AboutSection = () => {
                 <Coffee className="h-12 w-12 text-indigo-600 mb-4" />
                 <h3 className="text-xl font-semibold mb-2">Interests</h3>
                 <p className="text-gray-600">
-                  Machine Learning enthusiast. Love participating in hackathons and coding competitions.
+                  Cyber Security Concepts and Technologies. Red Team Testing Actions and Vulnerability Assessment.
                 </p>
               </div>
             </CardContent>
