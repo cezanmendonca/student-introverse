@@ -10,7 +10,7 @@ export async function POST(request: Request) {
     // Prepare email content
     const msg = {
       to,
-      from: 'noreply@yourdomain.com', // Replace with your verified SendGrid sender
+      from: 'bloghubsupabase@gmail.com', // Using your Gmail as the sender
       subject: `New Contact Form Message from ${name}`,
       text: `
         Name: ${name}
