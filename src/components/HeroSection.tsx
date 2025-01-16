@@ -17,14 +17,28 @@ export const HeroSection = () => {
               <Mail className="mr-2 h-4 w-4" />
               Contact Me
             </Button>
-            <Button variant="outline" className="w-full sm:w-auto">
-              <GithubIcon className="mr-2 h-4 w-4" />
-              GitHub
-            </Button>
-            <Button variant="outline" className="w-full sm:w-auto">
-              <LinkedinIcon className="mr-2 h-4 w-4" />
-              LinkedIn
-            </Button>
+            <a
+            href="https://github.com/cezanmendonca"
+            target="_blank"
+            rel="noopener noreferrer"
+              className="no-underline"
+            >
+              <Button variant="outline" className="w-full sm:w-auto">
+                <GithubIcon className="mr-2 h-4 w-4" />
+                GitHub
+              </Button>
+            </a>
+            <a
+            href="https://www.linkedin.com/in/cezan-mendonca/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="no-underline"
+            >
+              <Button variant="outline" className="w-full sm:w-auto">
+                <LinkedinIcon className="mr-2 h-4 w-4" />
+                LinkedIn
+              </Button>
+            </a>
           </div>
         </div>
         <div className="w-full lg:w-1/2 flex justify-center animate-fadeIn" style={{ animationDelay: "0.2s" }}>
