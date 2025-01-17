@@ -1,16 +1,24 @@
-import sgMail from '@sendgrid/mail';
+import nodemailer from 'nodemailer';
 
 export async function POST(request: Request) {
   try {
     const { name, email, message, to } = await request.json();
 
-    // Initialize SendGrid with API key
-    sgMail.setApiKey(process.env.SENDGRID_API_KEY || '');
+    // Create transporter using SendPulse SMTP
+    const transporter = nodemailer.createTransport({
+      host: "smtp-pulse.com",
+      port: 587,
+      secure: false,
+      auth: {
+        user: process.env.SENDPULSE_SMTP_USER || '',
+        pass: process.env.SENDPULSE_SMTP_PASSWORD || '',
+      },
+    });
 
     // Prepare email content
-    const msg = {
+    const mailOptions = {
+      from: 'bloghubsupabase@gmail.com',
       to,
-      from: 'bloghubsupabase@gmail.com', // Using your Gmail as the sender
       subject: `New Contact Form Message from ${name}`,
       text: `
         Name: ${name}
@@ -26,7 +34,7 @@ export async function POST(request: Request) {
     };
 
     // Send email
-    await sgMail.send(msg);
+    await transporter.sendMail(mailOptions);
 
     return new Response(JSON.stringify({ success: true }), {
       status: 200,
