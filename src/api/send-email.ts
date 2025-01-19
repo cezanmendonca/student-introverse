@@ -25,7 +25,7 @@ export async function POST(request: Request) {
       service: 'gmail',
       auth: {
         type: 'OAuth2',
-        user: 'bloghubsupabase@gmail.com',
+        user: 'your-email@gmail.com', // Replace with your Gmail address
         clientId: process.env.GMAIL_CLIENT_ID,
         clientSecret: process.env.GMAIL_CLIENT_SECRET,
         refreshToken: process.env.GMAIL_REFRESH_TOKEN,
@@ -35,7 +35,7 @@ export async function POST(request: Request) {
 
     // Prepare email content
     const mailOptions = {
-      from: 'bloghubsupabase@gmail.com',
+      from: 'your-email@gmail.com', // Replace with your Gmail address
       to,
       subject: `New Contact Form Message from ${name}`,
       text: `
