@@ -1,41 +1,23 @@
 import nodemailer from 'nodemailer';
-import { google } from 'googleapis';
-
-// Configure OAuth2
-const OAuth2 = google.auth.OAuth2;
-const oauth2Client = new OAuth2(
-  process.env.GMAIL_CLIENT_ID,
-  process.env.GMAIL_CLIENT_SECRET,
-  'https://developers.google.com/oauthplayground'
-);
-
-oauth2Client.setCredentials({
-  refresh_token: process.env.GMAIL_REFRESH_TOKEN
-});
 
 export async function POST(request: Request) {
   try {
     const { name, email, message, to } = await request.json();
 
-    // Get access token
-    const accessToken = await oauth2Client.getAccessToken();
-
-    // Create transporter using Gmail OAuth2
+    // Create transporter using SMTP
     const transporter = nodemailer.createTransport({
-      service: 'gmail',
+      host: "smtp.gmail.com",
+      port: 587,
+      secure: false, // Use TLS
       auth: {
-        type: 'OAuth2',
-        user: 'your-email@gmail.com', // Replace with your Gmail address
-        clientId: process.env.GMAIL_CLIENT_ID,
-        clientSecret: process.env.GMAIL_CLIENT_SECRET,
-        refreshToken: process.env.GMAIL_REFRESH_TOKEN,
-        accessToken: accessToken?.token || '',
+        user: process.env.EMAIL_USER, // Your email
+        pass: process.env.EMAIL_APP_PASSWORD // Your app-specific password
       },
     });
 
     // Prepare email content
     const mailOptions = {
-      from: 'your-email@gmail.com', // Replace with your Gmail address
+      from: process.env.EMAIL_USER,
       to,
       subject: `New Contact Form Message from ${name}`,
       text: `
