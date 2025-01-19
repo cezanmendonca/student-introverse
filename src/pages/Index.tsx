@@ -9,7 +9,7 @@ import Terms from "./terms";
 const Index = () => {
   return (
     <Routes>
-      <Route path="*" element={
+      <Route path="/" element={
         <div className="min-h-screen">
           <HeroSection />
           <AboutSection />
